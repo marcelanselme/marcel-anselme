@@ -120,8 +120,8 @@ h1, h2, h3, p { margin: 0; }
 .titulo { font-family: var(--serif); font-size: clamp(1.35rem, 2.6vw, 1.75rem); line-height: 1.25; }
 .meta { font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--suave); margin: 4px 0 10px; }
 
-.tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.tres li { display: flex; flex-direction: column; gap: 6px; }
+.tres { display: flex; flex-wrap: wrap; gap: 24px clamp(40px, 6vw, 88px); }
+.tres li { display: flex; flex-direction: column; gap: 6px; flex: none; }
 .tres .meta { margin: 0; }
 
 .marcas { display: flex; flex-wrap: wrap; gap: 6px 0; margin-top: 16px; font-family: var(--serif); font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
@@ -156,7 +156,7 @@ h1, h2, h3, p { margin: 0; }
 /* celular */
 @media (max-width: 760px) {
   .bloco { grid-template-columns: 1fr; }
-  .tres { grid-template-columns: 1fr; }
+  .tres { flex-direction: column; gap: 20px; }
   .projetos { grid-template-columns: 1fr; }
   .topo nav a { letter-spacing: 0.14em; }
   .reel { padding: 0; }
