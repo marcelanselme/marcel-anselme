@@ -206,3 +206,12 @@ dialog#janela::backdrop { background: rgba(0, 0, 0, 0.88); }
   font: inherit; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
 }
 .fechar:hover, .fechar:focus-visible { background: var(--papel); color: var(--fundo); }
+
+/* celular: sem header (a página é curta); a função vai para cima do nome */
+.funcao-mobile { display: none; }
+@media (max-width: 760px) {
+  .topo { display: none; }
+  html { scroll-padding-top: 0; }
+  .funcao-mobile { display: block; margin-bottom: 22px; }
+  .hero { padding-top: 44px; }
+}
