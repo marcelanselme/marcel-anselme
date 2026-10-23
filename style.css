@@ -212,6 +212,8 @@ dialog#janela::backdrop { background: rgba(0, 0, 0, 0.88); }
 @media (max-width: 760px) {
   .topo { display: none; }
   html { scroll-padding-top: 0; }
-  .funcao-mobile { display: block; margin-bottom: 22px; }
-  .hero { padding-top: 44px; }
+  .funcao-mobile { display: block; margin-bottom: 38px; line-height: 1.8; }
+  .funcao-mobile span { display: block; }
+  .funcao-mobile .sep { display: none; }
+  .hero { padding-top: 28px; }
 }
