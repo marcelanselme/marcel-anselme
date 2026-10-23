@@ -12,8 +12,8 @@
 }
 @font-face {
   font-family: "Helvetica Now Display";
-  src: url("fonts/HelveticaNowDisplayBold.ttf") format("truetype");
-  font-weight: 700;
+  src: url("fonts/HelveticaNowDisplayMedium.ttf") format("truetype");
+  font-weight: 500;
   font-display: swap;
 }
 
@@ -74,8 +74,10 @@ h1, h2, h3, p { margin: 0; }
   display: flex; justify-content: space-between; align-items: center; gap: 16px;
   padding: 16px var(--margem);
   background: var(--papel); color: var(--fundo);
+  transition: transform 0.3s ease;
 }
-.marca { font-family: var(--sans); font-weight: 700; font-size: 1.15rem; text-decoration: none; letter-spacing: 0.01em; }
+.topo.oculto { transform: translateY(-100%); }
+.marca { font-family: var(--sans); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; padding: 8px 0; display: inline-block; }
 .topo nav ul { display: flex; gap: clamp(14px, 3vw, 32px); }
 .topo nav a {
   font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; color: #55514a;
@@ -163,6 +165,7 @@ h1, h2, h3, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .botao { transition: none; }
+  .topo { transition: none; }
 }
 
 /* retrato retangular, preto e branco, como terceira coluna do Sobre */

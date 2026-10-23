@@ -2,6 +2,22 @@
   var ano = document.getElementById("ano");
   if (ano) ano.textContent = new Date().getFullYear();
 
+  // Header: some ao rolar para baixo e volta ao rolar para cima.
+  var topo = document.querySelector(".topo");
+  if (topo) {
+    var ultimo = window.scrollY, esperando = false;
+    var atualizar = function () {
+      var y = window.scrollY;
+      if (y < 80 || y < ultimo - 4) topo.classList.remove("oculto");
+      else if (y > ultimo + 4) topo.classList.add("oculto");
+      ultimo = y; esperando = false;
+    };
+    window.addEventListener("scroll", function () {
+      if (!esperando) { esperando = true; window.requestAnimationFrame(atualizar); }
+    }, { passive: true });
+    topo.addEventListener("focusin", function () { topo.classList.remove("oculto"); });
+  }
+
   // Reel: 720p por padrão (celular e conexão lenta), 1080p em telas grandes.
   // O vídeo só é carregado quando o visitante aperta play.
   var video = document.getElementById("video");
