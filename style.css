@@ -78,6 +78,8 @@ h1, h2, h3, p { margin: 0; }
 }
 .topo.oculto { transform: translateY(-100%); }
 .marca { font-family: var(--sans); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; padding: 8px 0; display: inline-block; }
+.topo-id { display: flex; align-items: center; gap: 1cm; min-width: 0; }
+.funcao { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: #55514a; }
 .topo nav ul { display: flex; gap: clamp(14px, 3vw, 32px); }
 .topo nav a {
   font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; color: #55514a;
@@ -87,13 +89,14 @@ h1, h2, h3, p { margin: 0; }
 .topo :focus-visible { outline-color: var(--fundo); }
 
 /* hero */
-.hero { padding: clamp(56px, 12vw, 150px) var(--margem) clamp(32px, 6vw, 72px); }
+.hero h1 .m { position: relative; display: inline-block; }
+.hero h1 .m::before { content: ""; position: absolute; left: -0.01em; right: 0; top: -0.033em; height: 0.07em; background: currentColor; }
+.hero { padding: clamp(56px, 9vw, 120px) var(--margem) clamp(32px, 6vw, 72px); }
 .hero h1 {
   font-family: var(--serif); font-weight: 400;
   font-size: clamp(3rem, 11.5vw, 9.5rem);
-  line-height: 0.98; letter-spacing: 0.01em; margin: 18px 0 20px;
+  line-height: 0.98; letter-spacing: 0.01em; margin: 0;
 }
-.hero .local { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--suave); }
 
 /* reel: protagonista */
 .reel { padding: 0 var(--margem); }
@@ -158,6 +161,10 @@ h1, h2, h3, p { margin: 0; }
   .topo nav a { letter-spacing: 0.14em; }
   .reel { padding: 0; }
   .legenda { padding: 0 var(--margem); }
+}
+@media (max-width: 1060px) {
+  .topo { flex-wrap: wrap; }
+  .topo-id { flex-direction: column; align-items: flex-start; gap: 0; }
 }
 @media (max-width: 420px) {
   .topo { flex-direction: column; align-items: flex-start; gap: 4px; }
