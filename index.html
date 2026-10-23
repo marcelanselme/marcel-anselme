@@ -24,7 +24,7 @@
   <meta name="twitter:image" content="https://marcelanselme.github.io/marcel-anselme/media/og.jpg">
 
   <link rel="preload" href="fonts/HolmenHeadlineTF-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <a class="skip" href="#conteudo">Ir para o conteúdo</a>
@@ -44,10 +44,7 @@
   <main id="conteudo">
     <section class="hero" id="inicio" aria-labelledby="nome">
       <p class="rotulo">Bailarino · Coreógrafo · Diretor de movimento</p>
-      <div class="hero-linha">
-        <img class="retrato" src="media/marcel.jpg" width="800" height="800" alt="Retrato em preto e branco de Marcel Anselmé" decoding="async">
-        <h1 id="nome">Marcel Anselmé</h1>
-      </div>
+      <h1 id="nome">Marcel Anselmé</h1>
       <p class="local">São Paulo</p>
     </section>
 
@@ -64,8 +61,11 @@
 
     <section class="bloco" id="sobre" aria-labelledby="sobre-titulo">
       <h2 id="sobre-titulo" class="rotulo">Sobre</h2>
-      <div class="conteudo">
+      <div class="conteudo sobre-duas">
         <p class="destaque">Bailarino, coreógrafo e diretor de movimento, com trajetória construída entre companhias de dança, o teatro musical e o audiovisual. Integra hoje o Balé da Cidade de São Paulo e assina coreografia e direção de movimento para marcas&nbsp;e&nbsp;televisão.</p>
+        <figure class="retrato">
+          <img src="media/marcel-retrato.jpg" width="720" height="960" alt="Retrato em preto e branco de Marcel Anselmé" loading="lazy" decoding="async">
+        </figure>
       </div>
     </section>
 
@@ -151,6 +151,6 @@
     </div>
   </dialog>
 
-  <script src="main.js" defer></script>
+  <script src="main.js?v=3" defer></script>
 </body>
 </html>

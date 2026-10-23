@@ -82,7 +82,7 @@ h1, h2, h3, p { margin: 0; }
 .hero h1 {
   font-family: var(--serif); font-weight: 400;
   font-size: clamp(3rem, 11.5vw, 9.5rem);
-  line-height: 0.98; letter-spacing: 0.01em;
+  line-height: 0.98; letter-spacing: 0.01em; margin: 18px 0 20px;
 }
 .hero .local { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--suave); }
 
@@ -158,12 +158,16 @@ h1, h2, h3, p { margin: 0; }
   .botao { transition: none; }
 }
 
-/* retrato em moldura redonda, preto e branco, ao lado do nome */
-.hero-linha { display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); margin: 18px 0 20px; }
-.hero-linha h1 { margin: 0; min-width: 0; }
-.retrato {
-  flex: none; width: clamp(60px, 9vw, 132px); height: auto; aspect-ratio: 1 / 1;
-  object-fit: cover; border-radius: 50%; filter: grayscale(1);
+/* retrato retangular, preto e branco, como terceira coluna do Sobre */
+.bloco .conteudo.sobre-duas {
+  max-width: 72rem; display: grid; grid-template-columns: minmax(0, 1fr) clamp(140px, 17vw, 240px);
+  gap: clamp(24px, 4vw, 64px); align-items: start;
+}
+.retrato { margin: 0; }
+.retrato img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; filter: grayscale(1); }
+@media (max-width: 760px) {
+  .bloco .conteudo.sobre-duas { grid-template-columns: 1fr; }
+  .retrato { width: min(56%, 220px); }
 }
 
 /* lista de projetos com vídeo */
