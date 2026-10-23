@@ -125,7 +125,8 @@ h1, h2, h3, p { margin: 0; }
 /* contato */
 .links { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 24px 0 0; }
 .links:empty { display: none; }
-.links a { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--suave); padding-bottom: 2px; }
+.links a { font-size: 1rem; letter-spacing: 0.04em; text-decoration: none; border-bottom: 1px solid var(--suave); padding: 6px 0 2px; display: inline-block; }
+.links a:hover, .links a:focus-visible { border-bottom-color: var(--papel); }
 .botao {
   display: inline-block; margin-top: 32px; padding: 16px 28px;
   border: 1px solid var(--papel); color: var(--papel); text-decoration: none;
